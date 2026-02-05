@@ -6,6 +6,7 @@
     <title>Web To Lead From</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <h1>Create Lead</h1>
@@ -14,6 +15,7 @@
       method="POST"
       onsubmit="returnbeforesubmit()"
     >
+       <input type=hidden name='captcha_settings' value='{"keyname":"WebToLeadForm","fallback":"true","orgId":"00D5j00000CA38V","ts":""}'>
       <input type="hidden" name="oid" value="00D5j00000CA38V" />
       <input type="hidden" name="retURL" value="https://alankarg701-droid.github.io/Web-To-Lead-Form/thankyou.html" />
       <input type="hidden" name="Lead_Date__c" class="outputdate" />
@@ -55,7 +57,7 @@
           size="12"
           type="text" /></span
       ><br />-->
-
+       <div class="g-recaptcha" data-sitekey="6Lcwj2EsAAAAAAMgszwCyTYL3KTWa5OXt5qTuo_x"></div><br>
       <input type="submit" name="submit" class="submit" />
     </form>
   </body>
